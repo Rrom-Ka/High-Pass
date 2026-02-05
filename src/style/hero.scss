@@ -1,0 +1,88 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+.hero {
+  padding-top: 41px;
+
+  &__container {
+    padding-bottom: 68px;
+    font-size: 0;
+  }
+
+  &__title {
+    grid-column: span 6;
+    line-height: 104%;
+    color: $colorText;
+  }
+
+  &__midlecard {
+    grid-column: span 6;
+    margin-bottom: 47px;
+    background-color: $colorBackground;
+  }
+
+  &__wrap {
+    grid-column: span 6;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-self: self-end;
+    width: 100%;
+  }
+
+  &__smallcard {
+    width: calc((100% - 30px) / 2);
+    background-color: $colorBackground;
+  }
+}
+
+.maincard {
+  column-gap: 0;
+  grid-column: span 6;
+  grid-row: span 3;
+  display: flex;
+  flex-direction: column;
+  // width: 630px;
+  padding: 15px 15px 59px 60px;
+  background-color: $colorBackground;
+  // background-image: url(./img/photolens.jpg);
+  background-image: image-set(url("./img/photolens.jpg") 1x,
+      url("./img/photolens_2x.jpg") 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__hashteg {
+    margin-bottom: auto;
+    margin-left: auto;
+    width: 123px;
+    @include hashtegBackGround();
+
+    &-span {
+      @include hashtegSpan();
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 2px;
+    @include fontRoboto400_16();
+    color: $colorTextLight;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 18px;
+    max-width: 427px;
+    font-family: "TT Firs Neue", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 104%;
+    color: $colorTextLight;
+  }
+
+  &__btn {
+    @include btnStyle();
+    color: $colorTextLight;
+    background: $colorBackgroundRude;
+  }
+}

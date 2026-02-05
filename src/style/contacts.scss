@@ -1,0 +1,229 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+
+.contacts {
+  padding-top: 69px;
+  padding-bottom: 69px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: "TT Firs Neue", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: $colorText;
+  }
+
+  &__map {
+    position: relative;
+    grid-column: span 8;
+    max-height: 460px;
+
+    & img {
+      height: 100%;
+    }
+  }
+
+  &__adress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $colorBackgroundCloudy;
+    height: calc(100% - 0px);
+    width: calc(50% - 15px);
+  }
+
+  &__form {
+    grid-column: span 4;
+  }
+}
+
+.formcontact {
+
+  &__title {
+    margin: 0;
+    margin-top: -6px;
+    margin-bottom: 4px;
+    @include fontTTFirs400_24();
+    line-height: 92%;
+    color: $colorText;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 14px;
+    max-width: 397px;
+    @include fontRoboto400_16();
+    line-height: 137%;
+    color: $colorTextGreyDark;
+  }
+
+  &__object {
+    display: flex;
+    flex-direction: column;
+    gap: 0 20px;
+  }
+
+  &__label-input {
+    margin-bottom: 20px;
+  }
+
+  &__label-textarea {
+    margin-bottom: 15px;
+  }
+
+  &__input {
+    padding: 17px 0 15px 23px;
+    width: 100%;
+    @include fontRoboto400_16();
+    color: $colorTextGreyDark;
+    background-color: $colorBackgroundGreyLight;
+    border: none;
+    outline: none;
+  }
+
+  &__textarea {
+    padding: 15px 0 0 23px;
+    width: 100%;
+    height: 150px;
+    @include fontRoboto400_16();
+    color: $colorTextGreyDark;
+    border: none;
+    background-color: $colorBackgroundGreyLight;
+  }
+
+  &__input,
+  &__textarea {
+    &:focus {
+      outline: 1px solid $colorBackgroundRude;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    &:hover {
+      outline: none;
+      outline-color: transparent;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    &:hover::placeholder {
+      color: $colorTextRude;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    &:active {
+      outline: none;
+      outline-color: transparent;
+      color: $colorText;
+    }
+  }
+
+  &__btn {
+    @include btnStyle();
+    color: $colorTextLight;
+    background: $colorBackgroundRude;
+  }
+}
+
+.adress {
+  padding: 175px 50px 150px 60px;
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 5px;
+    @include fontTTFirs400_24();
+    line-height: 92%;
+    color: #fff;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 4px;
+    @include fontRoboto400_16();
+    line-height: 175%;
+    color: $colorTextLight;
+  }
+
+  &__phone {
+    margin: 0;
+    padding-left: 21px;
+    font-family: "TT Firs Neue", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $colorTextRude;
+    background-image: url(./img/sprite.svg#phone);
+    background-repeat: no-repeat;
+    background-position-x: -45px
+  }
+
+  & .burger {
+    position: absolute;
+    display: block;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: $colorBackgroundGreyDark;
+    border-radius: 100%;
+    outline: none;
+  }
+
+  & .burger__line {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: $colorBackgroundLight;
+  }
+
+  & .burger__line:first-child {
+    top: 30%;
+    transform: translate(50%, -50%);
+    width: 50%;
+  }
+
+  & .burger__line:nth-child(2) {
+    top: 50%;
+    transform: translate(50%, -50%);
+    width: 50%;
+  }
+
+  & .burger__line:last-child {
+    bottom: 25%;
+    transform: translate(50%, -50%);
+    width: 50%;
+  }
+
+  & .burger_active .burger__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  & .burger_active .burger__line:first-child {
+    left: 0;
+    top: 50%;
+    width: 12px;
+    transform: translate(36%, -50%) rotate(45deg);
+    transform-origin: center;
+    transition: transform .3s ease-in-out, top .3s ease-in-out, left .3s ease-in-out;
+  }
+
+  & .burger_active .burger__line:last-child {
+    left: 0;
+    top: 50%;
+    width: 12px;
+    transform: translate(36%, -50%) rotate(-45deg);
+    transform-origin: center;
+    transition: transform .3s ease-in-out, top .3s ease-in-out, left .3s ease-in-out;
+  }
+}
+
+.danger {
+  outline: 1px solid #F06666;
+  color: #cacaca;
+}

@@ -1,0 +1,69 @@
+<section class="contacts" id="contacts">
+  <div class="container contacts__container">
+    <h2 class="contacts__title section-title">
+      Контакты
+    </h2>
+    <div class="contacts__content grid">
+      <div class="contacts__map">
+        <picture class="contacts__map-picture">
+          <source srcset="./img/contacts_map-320.jpg" media="(max-width: 576px)">
+          <source srcset="./img/contacts_map-768.jpg" media="(max-width: 768px)">
+          <source srcset="./img/contacts_map-1024.jpg" media="(max-width: 1024px)">
+          <img src="./img/contacts_map.jpg" alt="карта">
+        </picture>
+        <div class="contacts__adress adress">
+          <button class="btn-reset contacts__burger burger burger_active" aria-label="меню">
+            <span class="burger__line "></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+          <div class="adress__wrap">
+            <h3 class="adress__subtitle">
+              Студия &laquo;High pass&raquo;
+            </h3>
+            <p class="adress__descr">
+              <span class="adress__descr-city">
+                107045, Москва, Даев переулок,
+              </span>
+              <span>
+                дом&nbsp;41, бизнес-центр &laquo;Даев Плаза&raquo;, этаж&nbsp;8,
+              </span>
+              <span>
+                офис &#8470;&nbsp;82
+              </span>
+              <!-- 107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр &laquo;Даев Плаза&raquo;, этаж&nbsp;8, офис &#8470;&nbsp;82 -->
+            </p>
+            <div class="adress__phone">
+              +7&nbsp;495 424-23-532
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contacts__form formcontact">
+        <h3 class="formcontact__title">Оставить заявку</h3>
+        <p class="formcontact__descr">
+          Оставьте ваши данные, указав в&nbsp;графе &laquo;Комментарий&raquo; желаемые время и&nbsp;дату съёмки или
+          другого мероприятия
+        </p>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="formcontact__object">
+          <label class="formcontact__label-input">
+            <span class="visually-hidden">Имя</span>
+            <input type="text" name="name" class="formcontact__input formcontact__input-name" placeholder="Имя"
+              required>
+          </label>
+          <label class="formcontact__label-input">
+            <span class="visually-hidden">Введите эелектронный адрес</span>
+            <input type="email" name="email" class="formcontact__input formcontact__input-email" placeholder="Email"
+              required>
+          </label>
+          <label class="formcontact__label-textarea">
+            <span class="visually-hidden">ввдетие комментарий</span>
+            <textarea name="textarea" class="formcontact__textarea" placeholder="Комментарий"></textarea>
+          </label>
+          <button class="formcontact__btn btn btn-reset">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>

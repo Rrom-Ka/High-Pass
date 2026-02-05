@@ -1,0 +1,98 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+.about {
+  padding-bottom: 68px;
+  background-color: $colorBackground;
+
+  &__container {
+    padding-top: 33px;
+  }
+
+  &__title {
+    margin-bottom: 1px;
+    color: $colorTextLight;
+  }
+
+  &__left {
+    grid-column: span 6;
+    grid-row: span 3;
+    align-self: center;
+  }
+
+  &__descr {
+    @include fontRoboto400_16();
+    line-height: 175%;
+    color: $colorTextGrey;
+  }
+
+  &__right {
+    grid-column: span 6;
+    height: 255px;
+    margin-bottom: 26px;
+    background-color: $colorBackground;
+    // background-image: url('./img/about_camera.jpg');
+    background-image: image-set(url("./img/about_camera.jpg") 1x,
+        url("./img/about_camera_2x.jpg") 2x);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__subtitle {
+    grid-column: span 6;
+    margin: 0;
+    margin-bottom: 16px;
+    @include fontTTFirs400_24();
+    line-height: 92%;
+    color: $colorTextLight;
+  }
+}
+
+.form {
+  grid-column: span 6;
+  display: flex;
+  gap: 18px 30px;
+  flex-wrap: wrap;
+
+  // &__label {
+  //   margin-bottom: 18px;
+  // }
+
+  &__input {
+    padding: 17px 15px 16px 23px;
+    width: 474px;
+    @include fontRoboto400_16();
+    border: none;
+    background-color: #4A4A4A;
+    color: $colorTextGrey;
+
+    &:focus {
+      outline: 1px solid $colorBackgroundRude;
+    }
+
+    &:hover {
+      outline: none;
+      outline-color: transparent;
+      color: $colorTextRude;
+    }
+
+    &:active {
+      outline: none;
+      outline-color: transparent;
+      color: $colorTextLight;
+    }
+  }
+
+  &__btn {
+    align-self: auto;
+    @include btnStyle();
+    color: $colorTextLight;
+    background: $colorBackgroundRude;
+  }
+}
+
+.danger {
+  outline: 1px solid #F06666;
+  color: $colorTextGrey;
+}

@@ -1,0 +1,103 @@
+@import '_variables.scss';
+
+@mixin clearListStryles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin btnStyle {
+  align-self: flex-start;
+  padding: 16px 22px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border: 0;
+  outline: none;
+  outline-color: transparent;
+  transition: outline .3S ease-in-out, background-color .3S ease-in-out;
+
+  &:focus {
+    outline: 3px solid $colorBtnBgActive;
+    outline-offset: -3px;
+  }
+
+  &:hover {
+    background-color: $colorBackgroundHover;
+  }
+
+  &:active {
+    background-color: $colorBackgroundHover;
+  }
+}
+
+@mixin btnStyleBorder {
+  align-self: flex-start;
+  padding: 15px 22px 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  outline: 3px solid #ff6e30;
+  outline-offset: -3PX;
+  transition: outline .3S ease-in-out, background-color .3S ease-in-out;
+  border: none;
+
+  &:focus {
+    outline: 3px solid $colorBackgroundRude;
+    background-color: $colorBackgroundHover;
+    outline-offset: -3px;
+  }
+
+  &:hover {
+    background-color: $colorBackgroundRude;
+    outline-color: transparent;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $colorBtnBgActive;
+    outline-color: transparent;
+    outline: none;
+  }
+}
+
+@mixin hashtegBackGround {
+  padding: 7px 15px;
+  background-color: $colorBackground;
+
+}
+
+@mixin hashtegProjectBackGround {
+  padding: 6px 14px;
+  background-color: $colorBackground;
+}
+
+@mixin hashtegSpan {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: $colorTextLight;
+}
+
+@mixin fontRoboto400_16 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@mixin fontTTFirs400_24 {
+  font-family: "TT Firs Neue", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+@mixin hover {
+  @media(any-hover:hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

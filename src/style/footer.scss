@@ -1,0 +1,112 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+.footer {
+  border-bottom: 1px solid $colorBackgroundLight;
+  background-color: $colorBackground;
+
+  &__container {
+    padding-top: 24px;
+    padding-bottom: 15px;
+  }
+
+  &__mark {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    margin-bottom: 4px;
+  }
+
+  &__organization {
+    margin: 0;
+    font-family: "TT Firs Neue", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: $colorTextGreyLight;
+  }
+
+  &__centr {
+    grid-column: span 4;
+  }
+
+
+  &__figure {
+    margin: 0;
+    max-width: 361px;
+  }
+
+  &__quote {
+    @include fontRoboto400_16();
+    line-height: 137%;
+    letter-spacing: -0.13px;
+    color: $colorTextGrey;
+    quotes: none;
+  }
+
+  &__quote-autor {
+    @include fontRoboto400_16();
+    line-height: 137%;
+    color: $colorTextGrey;
+  }
+
+  &__social {
+    grid-column: span 4;
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+
+  &__slogan {
+    margin: 0;
+    margin-bottom: 5px;
+    @include fontRoboto400_16();
+    line-height: 137%;
+    color: $colorTextGrey;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // gap: 20px;
+  }
+
+  &__ok {
+    margin-right: 10px;
+  }
+
+
+  &__vk {
+    margin-left: 10px;
+  }
+
+  &__ok,
+  &__vk {
+    color: #CACACA;
+    outline: none;
+    outline-color: transparent;
+    transition: color .3s ease-in-out;
+
+    &:focus {
+      color: #BC572B;
+    }
+
+    &:hover {
+      color: #FF6E30;
+    }
+
+    &:active {
+      color: #CE4307;
+    }
+
+    & path {
+      fill: currentColor !important;
+    }
+  }
+}
